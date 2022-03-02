@@ -1,2 +1,5 @@
 # Bluetooth
 bluetooth.device.default_name=moto g(8)
+
+# USB
+vendor.usb.product_string=moto g(8)
