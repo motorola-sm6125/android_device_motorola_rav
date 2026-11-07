@@ -3,6 +3,30 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# A/B
+AB_OTA_PARTITIONS += \
+    odm \
+    product \
+    system_ext \
+    recovery
+
+# Partitions
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_MOT_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
+BOARD_MOT_DYNAMIC_PARTITIONS_SIZE := 4462739456
+BOARD_SUPER_PARTITION_SIZE := 8925478912
+TARGET_COPY_OUT_ODM := odm
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+
+# Recovery
+BOARD_INCLUDE_RECOVERY_DTBO := true
+
 # Include the common OEM chipset BoardConfig.
 include device/motorola/sm6125-common/BoardConfigCommon.mk
 
