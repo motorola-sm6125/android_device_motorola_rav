@@ -3,6 +3,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1560
+TARGET_SCREEN_WIDTH := 720
+
 # Overlay
 PRODUCT_PACKAGES += \
     SettingsProvider-Rav-Overlay
