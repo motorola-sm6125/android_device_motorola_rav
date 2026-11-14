@@ -7,6 +7,10 @@
 TARGET_SCREEN_HEIGHT := 1560
 TARGET_SCREEN_WIDTH := 720
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom
+
 # Overlay
 PRODUCT_PACKAGES += \
     SettingsProvider-Rav-Overlay
