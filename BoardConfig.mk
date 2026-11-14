@@ -27,6 +27,12 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
+# Verified boot
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
 # Include the common OEM chipset BoardConfig.
 include device/motorola/sm6125-common/BoardConfigCommon.mk
 
